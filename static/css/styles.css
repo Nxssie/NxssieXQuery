@@ -1,0 +1,41 @@
+body {
+    overflow: hidden; /* Hide scrollbars */
+}
+
+#jumbo {
+    margin-bottom: 5vh;
+}
+
+#songs-table {
+    text-align: center;
+}
+
+#songsDiv{
+    padding-right: 5vh;
+}
+
+#logo {
+    height: 7vh;
+    width: 7vh;
+}
+
+#spotify {
+    height: 100%;
+    width: 100%;
+    -ms-overflow-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#spotifyDiv {
+    align-content: center;
+    text-align: center;
+    display:block;
+    padding-left: 5vh;
+}
+#bg-img {
+    background-image: url(https://i.scdn.co/image/2ac254cc138988e77e9cd2948421280771fb93ae);
+    background-position: center;
+    background-size: cover;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
