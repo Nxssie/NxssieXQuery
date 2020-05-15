@@ -49,7 +49,7 @@ function page:myactors(
         <div class="container col-sm-6" id="spotifyDiv">
           <iframe id="spotify" src="https://open.spotify.com/embed/artist/6p9nrPaCQXasjQbaMZ2gv8" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
-        <div class="container col-sm-6" id="songsDiv">
+        <div class="container col-sm-6">
             <table id="songs-table" class="table" cellspacing="0" width="100%" >
               <thead>
                 <tr>
