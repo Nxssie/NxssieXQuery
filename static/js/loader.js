@@ -18,15 +18,15 @@ let loadJumbo = () => {
     `
 }
 
-let goBack = () => {
+function goBack() {
     window.history.back();
-    console.log("hello");
 }
+
 
 function initialize() {
     document.getElementById("jumbo").innerHTML = loadJumbo();
-    if(document.getElementById("return-button")){
-        document.getElementById("return-button").addEventListener("click", goBack());
+    if (document.getElementById("return-button")) {
+        document.getElementById("return-button").addEventListener("click", goBack);
     }
     dataTable();
 }

@@ -21,25 +21,25 @@ function page:mysongs(
       <!-- Datatables CSS -->
       <link href="static/css/addons/datatables2.min.css" rel="stylesheet" />
       <!--<link href="" rel="stylesheet" />-->
-      <link href="static/css/styles.css" rel="stylesheet" />
+      <link href="../static/css/styles.css" rel="stylesheet" />
 
       <!-- Favicon -->
-          <link rel="apple-touch-icon" sizes="57x57" href="static/img/favicon/apple-icon-57x57.png"/>
-          <link rel="apple-touch-icon" sizes="60x60" href="static/img/favicon/apple-icon-60x60.png"/>
-          <link rel="apple-touch-icon" sizes="72x72" href="static/img/favicon/apple-icon-72x72.png"/>
-          <link rel="apple-touch-icon" sizes="76x76" href="static/img/favicon/apple-icon-76x76.png"/>
-          <link rel="apple-touch-icon" sizes="114x114" href="static/img/favicon/apple-icon-114x114.png"/>
-          <link rel="apple-touch-icon" sizes="120x120" href="static/img/favicon/apple-icon-120x120.png"/>
-          <link rel="apple-touch-icon" sizes="144x144" href="static/img/favicon/apple-icon-144x144.png"/>
-          <link rel="apple-touch-icon" sizes="152x152" href="static/img/favicon/apple-icon-152x152.png"/>
-          <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-icon-180x180.png"/>
-          <link rel="icon" type="image/png" sizes="192x192" href="static/img/favicon/android-icon-192x192.png"/>
-          <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png"/>
-          <link rel="icon" type="image/png" sizes="96x96" href="static/img/favicon/favicon-96x96.png"/>
-          <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png"/>
-          <link rel="manifest" href="static/img/favicon/manifest.json"/>
+          <link rel="apple-touch-icon" sizes="57x57" href="../static/img/favicon/apple-icon-57x57.png"/>
+          <link rel="apple-touch-icon" sizes="60x60" href="../static/img/favicon/apple-icon-60x60.png"/>
+          <link rel="apple-touch-icon" sizes="72x72" href="../static/img/favicon/apple-icon-72x72.png"/>
+          <link rel="apple-touch-icon" sizes="76x76" href="../static/img/favicon/apple-icon-76x76.png"/>
+          <link rel="apple-touch-icon" sizes="114x114" href="../static/img/favicon/apple-icon-114x114.png"/>
+          <link rel="apple-touch-icon" sizes="120x120" href="../static/img/favicon/apple-icon-120x120.png"/>
+          <link rel="apple-touch-icon" sizes="144x144" href="../static/img/favicon/apple-icon-144x144.png"/>
+          <link rel="apple-touch-icon" sizes="152x152" href="../static/img/favicon/apple-icon-152x152.png"/>
+          <link rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon/apple-icon-180x180.png"/>
+          <link rel="icon" type="image/png" sizes="192x192" href="../static/img/favicon/android-icon-192x192.png"/>
+          <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon/favicon-32x32.png"/>
+          <link rel="icon" type="image/png" sizes="96x96" href="../static/img/favicon/favicon-96x96.png"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon/favicon-16x16.png"/>
+          <link rel="manifest" href="../static/img/favicon/manifest.json"/>
           <meta name="msapplication-TileColor" content="#ffffff"/>
-          <meta name="msapplication-TileImage" content="static/img/favicon/ms-icon-144x144.png"/>
+          <meta name="msapplication-TileImage" content="../static/img/favicon/ms-icon-144x144.png"/>
           <meta name="theme-color" content="#ffffff"/>
 
     </head>
@@ -48,7 +48,7 @@ function page:mysongs(
       <div class="row">
         <div class="container col-sm-6" id="spotifyDiv">
           <iframe id="spotify" src="https://open.spotify.com/embed/artist/6p9nrPaCQXasjQbaMZ2gv8" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-          <form action="/nxssie/searchsong" method="POST">
+          <form action="/nxssie/searchsong" method="POST" id="search-form">
               <div class="md-form">
                 <input type="text" name="songname" class="form-control"/>
                 <label for="form1">Search a song by name</label>
@@ -82,7 +82,7 @@ function page:mysongs(
       </div>
       <!-- Optional JS -->
       <!--<script type="text/javascript" src="" /> -->
-      <script type="module" src="static/js/loader.js"></script>
+      <script type="module" src="../static/js/loader.js"></script>
       <!-- JQuery -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <!-- Bootstrap tooltips -->
@@ -92,7 +92,7 @@ function page:mysongs(
       <!-- MDB core JavaScript -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
       <!-- Datatables JS -->
-      <script type="text/javascript" src="static/js/addons/datatables2.min.js"></script>
+      <script type="text/javascript" src="../static/js/addons/datatables2.min.js"></script>
 
     </body>
   </html>
@@ -175,8 +175,8 @@ function page:mysongs(
             </table>
         </div>
       </div>
-      <div class="row" id="return-buton-div">
-        <button class="btn peach-gradient" id="return-buton"><i class="fas fa-home left"></i>Return home</button>
+      <div class="container" id="return-buton-div">
+        <button class="btn peach-gradient" id="return-button"><i class="fas fa-home left"></i>Return home</button>
       </div>
       <!-- Optional JS -->
       <!--<script type="text/javascript" src="" /> -->
