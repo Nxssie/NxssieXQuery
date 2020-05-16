@@ -1,5 +1,5 @@
 # NxssieXQuery
-NxssieXQuery is a project written in HTMl with some XQuery queries to obtain a detailed list of my own songs currently available in Spotify
+NxssieXQuery is a project written in HTML with some XQuery queries to obtain a detailed list of my own songs currently available in Spotify
 
 ## Tools
 * BaseX 9.3.2
