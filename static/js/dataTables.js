@@ -1,12 +1,13 @@
 export let dataTable = () => {
     $(document).ready(function () {
         $('#songs-table').DataTable({
+            "paging": false,
             "bLengthChange": false,
+            "scrollY": "35vh",
+            "scrollCollapse": true,
             bFilter: false,
             bInfo: false
         });
-        $('#songs-table_wrapper').find('label').each(function () {
-            $(this).parent().append($(this).children());
-        });
+        $('.dataTables_length').addClass('bs-select');
     });
 }

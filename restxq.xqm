@@ -20,6 +20,7 @@ function page:mysongs(
       <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet" />
       <!-- Datatables CSS -->
       <link href="static/css/addons/datatables2.min.css" rel="stylesheet" />
+
       <!--<link href="" rel="stylesheet" />-->
       <link href="../static/css/styles.css" rel="stylesheet" />
 
@@ -46,18 +47,51 @@ function page:mysongs(
     <body>
       <div id="jumbo"> <!-- Here goes the jumbotron from JS --> </div>
       <div class="row">
-        <div class="container col-sm-6" id="spotifyDiv">
-          <iframe id="spotify" src="https://open.spotify.com/embed/artist/6p9nrPaCQXasjQbaMZ2gv8" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-          <form action="/nxssie/searchsong" method="POST" id="search-form">
-              <div class="md-form">
+        <div class="container col-sm-6">
+          <div class="dropdown" id="insert-container">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Insert a song
+            </a>
+            <div class="dropdown-menu">
+              <form class="px-4 py-3" action="/nxssie/insertsong" method="POST" id="insert-form">
+                <div class="md-form">
+                  <input type="text" id="song-name" class="form-control" />
+                  <label for="song-name">Song name</label>
+                </div>
+                <div class="md-form">
+                  <input type="text" id="album" class="form-control" />
+                  <label for="album">Album</label>
+                </div>
+                <div class="md-form">
+                  <input type="text" id="release-date" class="form-control" />
+                  <label for="release-date">Release Date</label>
+                </div>
+                <div class="md-form">
+                  <input type="text" id="spotifyurl" class="form-control" />
+                  <label for="spotifyurl">Spotify URL</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Insert</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="container col-sm-6">
+          <form class="form-inline" action="/nxssie/searchsong" method="POST" id="search-form">
+              <div class="md-form" id="search-container">
                 <input type="text" name="songname" class="form-control"/>
-                <label for="form1">Search a song by name</label>
-                <input type="submit"></input>
+                <label for="songname">Song name</label>
+                <button type="submit" class="btn btn-primary btn-sm">Search</button>
               </div>
           </form>
         </div>
+      </div>
+      <div class="row">
+        <div class="container col-sm-6" id="spotifyDiv">
+          <iframe id="spotify" src="https://open.spotify.com/embed/artist/6p9nrPaCQXasjQbaMZ2gv8" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
         <div class="container col-sm-6">
-            <table id="songs-table" class="table" cellspacing="0" width="100%" >
+            <table id="songs-table" class="table" cellspacing="0" width="100%" height="50%" >
               <thead>
                 <tr>
                   <th class="th-sm">Song name</th>
