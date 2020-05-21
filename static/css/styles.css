@@ -26,7 +26,20 @@ table.dataTable thead .sorting_desc_disabled:before {
     margin-bottom: 5vh;
 }
 
-#return-button-div{
+#update-form {
+    width: 50vh;
+    height: 100%;
+    padding: 10px;
+    margin-top: -2vh;
+    margin-bottom: -2vh;
+}
+
+#update-button-div {
+    text-align: center;
+}
+
+#buttons-read-page{
+    display: flex;
     align-content: center;
     text-align: center;
 }
