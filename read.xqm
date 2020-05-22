@@ -81,9 +81,7 @@ function page:mysongs(
       </div>
       <div class="row">
         <div class="container" id="buttons-read-page">
-          <form action="/nxssie">
-            <button type="submit" class="btn peach-gradient" id="return-button"><i class="fas fa-home mr-2"></i>Return home</button>
-          </form>
+          <a href="/nxssie" class="btn peach-gradient" id="return-button"><i class="fas fa-home mr-2"></i>Return home</a>
           <div class="dropdown" id="insert-container">
             <a class="btn btn-outline-secondary waves-effect dropdown-toggle" href="#" role="button" id="update-button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

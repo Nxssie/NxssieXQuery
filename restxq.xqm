@@ -56,7 +56,7 @@ function page:mysongs(
             <div class="dropdown-menu">
               <form class="px-4 py-3" action="/nxssie/insertsong" method="POST" id="insert-form">
                 <div class="md-form">
-                  <input type="hidden" name="songid" class="form-conmtrol" />
+                  <input type="hidden" name="songid" class="form-control" />
                 </div>
                 <div class="md-form">
                   <input type="text" name="songname" class="form-control" />

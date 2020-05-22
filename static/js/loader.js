@@ -20,7 +20,6 @@ let loadJumbo = () => {
 
 function initialize() {
     document.getElementById("jumbo").innerHTML = loadJumbo();
-
     dataTable();
 }
 
