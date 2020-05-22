@@ -81,70 +81,78 @@ function page:mysongs(
       </div>
       <div class="row">
         <div class="container" id="buttons-read-page">
-          <button class="btn peach-gradient" id="return-button"><i class="fas fa-home mr-2"></i>Return home</button>
+          <form action="/nxssie">
+            <button type="submit" class="btn peach-gradient" id="return-button"><i class="fas fa-home mr-2"></i>Return home</button>
+          </form>
           <div class="dropdown" id="insert-container">
             <a class="btn btn-outline-secondary waves-effect dropdown-toggle" href="#" role="button" id="update-button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-edit mr-2"></i>Edit
             </a>
             <div class="dropdown-menu">
-              <form action="/nxssie/updatesong" method="POST" id="update-form">
-                <div class="form-row">
+            {
+              for $song in doc("songs")/songs/song
+              where $song/name = $songname
+              order by $song/name
+              return
+                <form action="/nxssie/updatesong" method="POST" id="update-form">
+                  <div class="form-row">
+                      <div class="col">
+                          <!-- Song name -->
+                          <div class="md-form">
+                            <input type="text" name="songname" class="form-control" value="{$song/name/text()}" />
+                            <label for="song-name">Song name</label>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <!-- Album name -->
+                          <div class="md-form">
+                            <input type="text" name="albumname" class="form-control" value="{$song/album/text()}"/>
+                            <label for="albumname">Album</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="col">
+                          <!-- Artist name -->
+                          <div class="md-form">
+                            <input type="text" name="artistname" class="form-control" value="{$song/artist/text()}"/>
+                            <label for="artistname">Artist</label>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <!-- Genre -->
+                          <div class="md-form">
+                            <input type="text" name="genre" class="form-control" value="{$song/genre/text()}"/>
+                            <label for="genre">Genre</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="col">
+                          <!-- Date released -->
+                          <div class="md-form">
+                            <input type="text" name="datereleased" class="form-control" value="{$song/released/text()}"/>
+                            <label for="datereleased">Release Date</label>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <!-- Spotify URL -->
+                          <div class="md-form">
+                            <input type="text" name="spotifyurl" class="form-control" value="{$song/url/text()}"/>
+                            <label for="spotifyurl">Spotify URL</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-row" id="update-button-div">
                     <div class="col">
-                        <!-- Song name -->
-                        <div class="md-form">
-                          <input type="text" name="songname" class="form-control" />
-                          <label for="song-name">Song name</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <!-- Album name -->
-                        <div class="md-form">
-                          <input type="text" name="albumname" class="form-control" />
-                          <label for="albumname">Album</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col">
-                        <!-- Artist name -->
-                        <div class="md-form">
-                          <input type="text" name="artistname" class="form-control" />
-                          <label for="artistname">Artist</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <!-- Genre -->
-                        <div class="md-form">
-                          <input type="text" name="genre" class="form-control" />
-                          <label for="genre">Genre</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col">
-                        <!-- Date released -->
-                        <div class="md-form">
-                          <input type="text" name="datereleased" class="form-control" />
-                          <label for="datereleased">Release Date</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <!-- Spotify URL -->
-                        <div class="md-form">
-                          <input type="text" name="spotifyurl" class="form-control" />
-                          <label for="spotifyurl">Spotify URL</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row" id="update-button-div">
-                  <div class="col">
-                    <div class="md-form">
-                      <button type="submit" class="btn btn-primary">Update</button>
+                      <div class="md-form">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              }
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import {dataTable} from "./dataTables.js";
-import {insertData} from "./insertData.js";
 
 window.onload = initialize;
 
@@ -19,19 +18,8 @@ let loadJumbo = () => {
     `
 }
 
-function goBack() {
-    window.history.back();
-}
-
-
 function initialize() {
     document.getElementById("jumbo").innerHTML = loadJumbo();
-    if (document.getElementById("return-button")) {
-        document.getElementById("return-button").addEventListener("click", goBack);
-    }
-    if (document.getElementById("update-form")) {
-        insertData();
-    }
 
     dataTable();
 }

@@ -38,6 +38,8 @@ table.dataTable thead .sorting_desc_disabled:before {
     text-align: center;
 }
 
+
+
 #buttons-read-page{
     display: flex;
     align-content: center;
@@ -86,5 +88,9 @@ table.dataTable thead .sorting_desc_disabled:before {
 }
 
 #insert-container {
+    text-align: center;
+}
+
+#insert-button {
     text-align: center;
 }

@@ -56,6 +56,9 @@ function page:mysongs(
             <div class="dropdown-menu">
               <form class="px-4 py-3" action="/nxssie/insertsong" method="POST" id="insert-form">
                 <div class="md-form">
+                  <input type="hidden" name="songid" class="form-conmtrol" />
+                </div>
+                <div class="md-form">
                   <input type="text" name="songname" class="form-control" />
                   <label for="song-name">Song name</label>
                 </div>
@@ -79,7 +82,9 @@ function page:mysongs(
                   <input type="text" name="spotifyurl" class="form-control" />
                   <label for="spotifyurl">Spotify URL</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Insert</button>
+                <div class="md-form" id="insert-button">
+                  <button type="submit" class="btn btn-primary">Insert</button>
+                </div>
               </form>
             </div>
           </div>
