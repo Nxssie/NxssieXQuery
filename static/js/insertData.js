@@ -1,3 +1,5 @@
 export let insertData = () => {
-    document.getElementById("")
+    let updateForm = document.getElementById("update-form");
+    console.log(document.getElementById("td-name").childNodes[0].nodeValue);
+    updateForm["name"].value = document.getElementById("td-name").childNodes[0].nodeValue;
 }

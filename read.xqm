@@ -55,6 +55,7 @@ function page:mysongs(
                 <tr>
                   <th class="th-sm">Song name</th>
                   <th class="th-sm">Album</th>
+                  <th class="th-sm">Artist</th>
                   <th class="th-sm">Genre</th>
                   <th class="th-sm">Released</th>
                 </tr>
@@ -66,11 +67,12 @@ function page:mysongs(
                         return
                               <tbody>
                                  <tr>
-                                      <td> {$song/name/text()} </td>
-                                      <td> {$song/album/text()} </td>
-                                      <td> {$song/genre/text()} </td>
-                                      <td> {$song/released/text()} </td>
-                                      <td><a class="btn aqua-gradient" href="{$song/url/text()}"><i class="fab fa-spotify left"></i>Listen {$song/name/text()} on Spotify</a></td>
+                                      <td id="td-name"> {$song/name/text()} </td>
+                                      <td id="td-album"> {$song/album/text()} </td>
+                                      <td id="td-artist"> {$song/artist/text()} </td>
+                                      <td id="td-genre"> {$song/genre/text()} </td>
+                                      <td id="td-released"> {$song/released/text()} </td>
+                                      <td id="td-url"><a class="btn aqua-gradient" href="{$song/url/text()}"><i class="fab fa-spotify left"></i>Listen {$song/name/text()} on Spotify</a></td>
                                  </tr>
                               </tbody>
                 }

@@ -1,4 +1,5 @@
 import {dataTable} from "./dataTables.js";
+import {insertData} from "./insertData.js";
 
 window.onload = initialize;
 
@@ -28,6 +29,10 @@ function initialize() {
     if (document.getElementById("return-button")) {
         document.getElementById("return-button").addEventListener("click", goBack);
     }
+    if (document.getElementById("update-form")) {
+        insertData();
+    }
+
     dataTable();
 }
 
